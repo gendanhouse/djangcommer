@@ -9,6 +9,7 @@ class AccountAdmin(UserAdmin):
     list_display = ('email', 'first_name', 'last_name',
                     'username', 'last_login', 'date_joinded', 'is_active')
     list_display_links = ('email', 'first_name', 'last_name')
+    list_editable = ('is_active',)
     readonly_fields = ('last_login',)
     ordering = ('-date_joinded',)
     filter_horizontal = ()
